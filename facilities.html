@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おすすめ施設</title>
+    <link rel="stylesheet" href="saisyukadaitop.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>おすすめ施設</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="saisyukadaitop.html">トップページ</a></li>
+                    <li><a href="sauna-benefits.html">サウナの魅力</a></li>
+                    <li><a href="heatwave-experience.html">熱波体験の解説</a></li>
+                    <li><a href="sauna-guide.html">サウナの利用ガイド</a></li>
+                    <li><a href="facilities.html">おすすめ施設</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+	
+<div class="quote-sidebar">
+    <h3>サウナの名言</h3>
+    <p id="sauna-quote">Loading...</p>
+</div>
+
+
+
+
+    <main>
+        <section class="content-section">
+    <h2>おすすめサウナ施設</h2>
+    <div class="sauna-facilities">
+        <!-- サウナ1 -->
+        <div class="sauna-card">
+            <img src="IMG_9161.JPG" alt="サウナ施設1">
+            <h3>品川サウナ</h3>
+            <p>2024年サウナシュランを受賞2種類のサウナと素晴らしい外気浴を楽しめる。コンパクトでありながらサウナーの欲しいものがすべて揃っている贅沢空間。「憂き世離れ」というコンセプトが見事に形になった都市型サウナの最適解</p>
+            <a href="https://sauna-ikitai.com/saunas/80262" target="_blank">詳細を見る（サウナイキタイ）</a>
+        </div>
+        <!-- サウナ2 -->
+        <div class="sauna-card">
+            <img src="IMG_8853.JPG" alt="サウナ施設2">
+            <h3>サウナ道場</h3>
+            <p>渋谷のど真ん中。無駄がないサウナで高温であり水風呂も超冷たい。熱波イベントも充実。</p>
+            <a href="https://sauna-ikitai.com/saunas/78191" target="_blank">詳細を見る（サウナイキタイ）</a>
+        </div>
+        <!-- サウナ3 -->
+        <div class="sauna-card">
+            <img src="IMG_8752.JPG" alt="サウナ施設3">
+            <h3>オアシス御殿場</h3>
+            <p>昔のホテルのような雰囲気。サ飯のモツカレーが絶品水風呂が2種類あり１つは大きなプールで気持ちいい</p>
+            <a href="https://sauna-ikitai.com/saunas/2388" target="_blank">詳細を見る（サウナイキタイ）</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <footer>
+        <p>
+            <a href="saisyukadaitop.html" class="back-to-top">トップページに戻る</a>
+        </p>
+        <p>&copy; 2025 金木熱波師のサウナガイド</p>
+    </footer>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // サウナの名言リスト
+        const quotes = [
+            "「水風呂、それは心のデトックス。」",
+            "熱波を浴びて、明日もがんばろう！",
+            "「頑張った自分には、サウナがある。」",
+            "サウナはただの休息ではなく、新たな活力だ。",
+            "サウナの後の一杯は格別だ。",
+            "「サウナを愛し、整いを愛す。」",
+            "心が疲れたらサウナに行こう。",
+            "サウナは今日という日のリセットボタン。"
+        ];
+
+        // ランダムに名言を表示
+        function updateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            $("#sauna-quote").fadeOut(300, function() {
+                $(this).text(quotes[randomIndex]).fadeIn(300);
+            });
+        }
+
+        // 初回表示
+        updateQuote();
+
+        // 5秒ごとに名言を更新
+        setInterval(updateQuote, 5000);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サウナの利用ガイド</title>
+    <link rel="stylesheet" href="saisyukadaitop.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>サウナの利用ガイド</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="saisyukadaitop.html">トップページ</a></li>
+                    <li><a href="sauna-benefits.html">サウナの魅力</a></li>
+                    <li><a href="heatwave-experience.html">熱波体験の解説</a></li>
+                    <li><a href="sauna-guide.html">サウナの利用ガイド</a></li>
+                    <li><a href="facilities.html">おすすめ施設</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+	
+	<div class="quote-sidebar">
+    <h3>サウナの名言</h3>
+    <p id="sauna-quote">Loading...</p>
+</div>
+
+
+
+    <main>
+        <section class="content-section">
+            <h2>サウナの基本的な使い方</h2>
+            <p>
+                初めての方でも安心して楽しめるよう、基本的な利用ガイドをご紹介します。
+                温冷交代浴を取り入れることで、より効果的なサウナ体験ができます。
+            </p>
+            <h3>利用の流れ</h3>
+            <ol>
+                <li>シャワーで体を清潔にしてからサウナに入る</li>
+                <li>サウナで体を温める（目安: 5～10分）心拍数が150程度がおすすめ</li>
+                <li>水風呂で体を冷やす（目安: 1～2分）心拍数90程度がおすすめ</li>
+                <li>休憩でリラックス（目安: 5～10分）整ったという感覚をまつ</li>
+                <li>2～3セットを繰り返す</li>
+            </ol>
+            <h3>金木おすすめの入り方</h3>
+            <ul>
+                <li>サウナの前にお風呂でからだを温めるとよい</li>
+                <li>できるだけ上段にいき体全体が温まる体勢をとる</li>
+                <li>サウナ室を出て体がポカポカしていると整いチャンス</li>
+				<li>1セット目は水風呂と休憩を少し短めにする</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="saisyukadaitop.html" class="back-to-top">トップページに戻る</a>
+        </p>
+        <p>&copy; 2025 金木熱波師のサウナガイド</p>
+    </footer>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // サウナの名言リスト
+        const quotes = [
+            "「熱波を浴びて、強くなれ。」",
+            "「サウナに逃げてもいい、そこで見つかる何かがある。」",
+            "水風呂は心のリセットボタン。",
+            "「サウナの外には、新しい世界が待っている。」",
+            "サウナの後の一杯は格別だ。",
+            "「サウナの後の一杯、それが私の幸せ。」",
+            "心が疲れたらサウナに行こう。",
+            "「汗と共に、悩みを流せ。」"
+        ];
+
+        // ランダムに名言を表示
+        function updateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            $("#sauna-quote").fadeOut(300, function() {
+                $(this).text(quotes[randomIndex]).fadeIn(300);
+            });
+        }
+
+        // 初回表示
+        updateQuote();
+
+        // 5秒ごとに名言を更新
+        setInterval(updateQuote, 5000);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サウナの魅力</title>
+    <link rel="stylesheet" href="saisyukadaitop.css">
+
+</head>
+
+<body>
+    <header>
+    <div class="header-container">
+        <h1>サウナの魅力</h1>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="saisyukadaitop.html">トップページ</a></li>
+                <li><a href="sauna-benefits.html">サウナの魅力</a></li>
+                <li><a href="heatwave-experience.html">熱波体験の解説</a></li>
+                <li><a href="sauna-guide.html">サウナの利用ガイド</a></li>
+                <li><a href="facilities.html">おすすめ施設</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="quote-sidebar">
+    <h3>サウナの名言</h3>
+    <p id="sauna-quote">Loading...</p>
+</div>
+
+
+    <main>
+    <section class="content-section">
+    <h2>サウナの魅力</h2>
+    <p>サウナって、ただ汗をかくだけじゃないんです！心と体を整える、最高のリラクゼーション体験を提供します。</p>
+
+    <div class="benefits">
+        <div class="benefit-item">
+            <img src="pexels-cottonbro-8343928.jpg" alt="デトックス効果">
+            <h3>デトックス効果</h3>
+            <p>体の中から老廃物を流し、汗でスッキリ。サウナ後の爽快感は格別です！</p>
+        </div>
+        <div class="benefit-item">
+            <img src="pexels-pixabay-258145.jpg" alt="リラクゼーション">
+            <h3>リラクゼーション</h3>
+            <p>景色を眺めながらリラックスするような感覚をサウナで。ストレスも吹き飛びます。</p>
+        </div>
+    </div>
+<section class="content-section">
+    <h2>サウナの魅力を動画で体験</h2>
+    <div class="video-container">
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/Ig8Rb8YpCrU?si=K0Ie7fwWckWkhC7j" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+
+    </main>
+	<footer>
+	<footer>
+    <p>
+        <a href="saisyukadaitop.html" class="back-to-top">トップページに戻る</a>
+    </p>
+    <p>&copy; 2025 金木熱波師のサウナガイド</p>
+    </footer>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // サウナの名言リスト
+        const quotes = [
+            "「整えずして、何が人生か。」",
+            "「サウナの前に道はなく、サウナの後に道は続く。」",
+            "「私は何度でも入る、サウナのために。」",
+            "「サウナに行けば、なんとかなるさ。」",
+            "「今日の整いは、明日の希望。」",
+            "高温と冷水が生み出す、究極のリラックス。",
+            "心が疲れたらサウナに行こう。",
+            "「サウナは裏切らない。」"
+        ];
+
+        // ランダムに名言を表示
+        function updateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            $("#sauna-quote").fadeOut(300, function() {
+                $(this).text(quotes[randomIndex]).fadeIn(300);
+            });
+        }
+
+        // 初回表示
+        updateQuote();
+
+        // 5秒ごとに名言を更新
+        setInterval(updateQuote, 5000);
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熱波体験の解説</title>
+    <link rel="stylesheet" href="saisyukadaitop.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>熱波体験の解説</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="saisyukadaitop.html">トップページ</a></li>
+                    <li><a href="sauna-benefits.html">サウナの魅力</a></li>
+                    <li><a href="heatwave-experience.html">熱波体験の解説</a></li>
+                    <li><a href="sauna-guide.html">サウナの利用ガイド</a></li>
+                    <li><a href="facilities.html">おすすめ施設</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+	
+	<div class="quote-sidebar">
+    <h3>サウナの名言</h3>
+    <p id="sauna-quote">Loading...</p>
+</div>
+
+
+    <main>
+        <section class="content-section">
+            <h2>熱波体験とは？</h2>
+            <p>
+                熱波体験（アウフグース）は、サウナで行われる特別なイベントで、アロマ水をサウナストーンに注ぎ、高温の蒸気を発生させます。
+                熱波師がタオルを使って蒸気を循環させ、体全体を温めます。この体験は通常のサウナよりもさらにリラックス効果やデトックス効果を高めると言われています。
+				仰ぐ以外にもさまざまな工夫を凝らしてお客様にサービスしていきます
+            </p>
+            <h3>熱波体験の流れ</h3>
+            <ol>
+                <li>アロマ水をストーンに注ぎ蒸気を立ち上がらせる</li>
+                <li>熱波師がタオルで蒸気を循環させる</li>
+                <li>お客さんに直接風を送る</li>
+                <li>心地よい香りと熱を楽しむ</li>
+            </ol>
+            <h3>熱波体験の効果</h3>
+            <ul>
+                <li>普通のサウナ体験よりさらに体が温まりやすいです</li>
+                <li>リラクゼーション効果がとても高いです</li>
+               
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <a href="saisyukadaitop.html" class="back-to-top">トップページに戻る</a>
+        </p>
+        <p>&copy; 2025 金木熱波師のサウナガイド</p>
+    </footer>
+	
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // サウナの名言リスト
+        const quotes = [
+            "「熱波は一日にして成らず。」",
+            "熱波を浴びて、明日もがんばろう！",
+            "「冷水を制する者が、サウナを制す。」",
+            "サウナはただの休息ではなく、新たな活力だ。",
+            "「汗をかくたび、心が軽くなる。」",
+            "「冷水は冷たいけど、心は熱くなる。」",
+            "心が疲れたらサウナに行こう。",
+            "「深呼吸、深整い。」"
+        ];
+
+        // ランダムに名言を表示
+        function updateQuote() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            $("#sauna-quote").fadeOut(300, function() {
+                $(this).text(quotes[randomIndex]).fadeIn(300);
+            });
+        }
+
+        // 初回表示
+        updateQuote();
+
+        // 5秒ごとに名言を更新
+        setInterval(updateQuote, 5000);
+    });
+</script>
+
+</body>
+</html>
